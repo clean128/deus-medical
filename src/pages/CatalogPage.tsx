@@ -28,6 +28,7 @@ export function CatalogPage() {
             src={HERO_BOX_IMAGE}
             alt="Deus Medical"
             loading="eager"
+            style={{ width: '150%', height: '150%', objectFit: 'contain' }}
           />
           <div className="catalog-hero-overlay" />
         </div>
@@ -39,12 +40,6 @@ export function CatalogPage() {
           <p className="catalog-hero-subtitle">
             Productos de calidad. Entrega rápida. Máxima seguridad.
           </p>
-          <a href="#catalogo-productos" className="catalog-hero-cta" onClick={(e) => { e.preventDefault(); scrollToCatalog() }}>
-            Ir a la tienda
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 5v14M5 12l7 7 7-7" />
-            </svg>
-          </a>
         </div>
       </section>
 

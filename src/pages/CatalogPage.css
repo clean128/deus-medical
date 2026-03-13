@@ -1,15 +1,15 @@
-/* Catalog Page - Evoload-inspired modern UI | Deus Medical: Blanco, Azul, Rojo */
+/* Catalog Page - Deus Medical: Blanco, Azul, Rojo */
 .catalog-page {
   --dm-white: #ffffff;
-  --dm-blue: #0f172a;
-  --dm-blue-mid: #1e3a5f;
-  --dm-blue-light: #334155;
-  --dm-blue-pale: #f1f5f9;
-  --dm-blue-subtle: #e2e8f0;
-  --dm-red: #dc2626;
-  --dm-red-light: #ef4444;
-  --dm-text: #0f172a;
-  --dm-text-muted: #64748b;
+  --dm-blue: #1e3a5f;
+  --dm-blue-mid: #2d5a87;
+  --dm-blue-light: #3d6b9e;
+  --dm-blue-pale: #e8f0f8;
+  --dm-blue-subtle: #dce8f4;
+  --dm-red: #c41e3a;
+  --dm-red-light: #e63950;
+  --dm-text: #1e3a5f;
+  --dm-text-muted: #5a6c7d;
   --dm-border: rgba(15, 23, 42, 0.08);
   --dm-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   --dm-shadow-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.1), 0 4px 12px -4px rgba(0, 0, 0, 0.06);
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--dm-blue);
+  background: var(--dm-white);
 }
 
 .catalog-hero-bg img {
@@ -52,9 +52,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(15, 23, 42, 0.4) 0%,
-    rgba(15, 23, 42, 0.7) 50%,
-    rgba(15, 23, 42, 0.95) 100%
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.6) 80%,
+    rgba(255, 255, 255, 0.95) 100%
   );
 }
 
@@ -82,9 +82,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--dm-white);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--dm-blue-mid);
   border-radius: 100px;
   margin-bottom: 1.5rem;
 }
@@ -94,13 +92,13 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: var(--dm-white);
+  color: var(--dm-blue);
   margin: 0 0 1rem;
 }
 
 .catalog-hero-subtitle {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--dm-text-muted);
   margin: 0 0 2rem;
   line-height: 1.6;
 }
@@ -113,17 +111,18 @@
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--dm-blue);
-  background: var(--dm-white);
+  color: var(--dm-white);
+  background: var(--dm-red);
   border-radius: 12px;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
 }
 
 .catalog-hero-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background: var(--dm-red-light);
+  box-shadow: 0 8px 28px rgba(220, 38, 38, 0.35);
 }
 
 .catalog-hero-cta svg {

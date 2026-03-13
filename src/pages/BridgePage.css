@@ -11,7 +11,7 @@
 .bridge-background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 50%, #0a1628 100%);
+  background: #ffffff;
 }
 
 .bridge-glow {
@@ -19,7 +19,7 @@
   inset: 0;
   background: radial-gradient(
     ellipse 80% 50% at 50% 60%,
-    rgba(0, 150, 199, 0.15) 0%,
+    rgba(30, 58, 95, 0.06) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -29,8 +29,8 @@
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(30, 58, 95, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 58, 95, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
 }
@@ -59,14 +59,14 @@
 .bridge-headline-prefix {
   font-size: 1rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #1e3a5f;
   letter-spacing: 0.15em;
 }
 
 .bridge-headline-main {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #fff;
+  color: #1e3a5f;
   letter-spacing: 0.05em;
 }
 
@@ -74,14 +74,14 @@
   margin: 0;
   font-size: 0.85rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: #5a6c7d;
   letter-spacing: 0.2em;
 }
 
 .bridge-subtagline {
   margin: 0;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #5a6c7d;
   letter-spacing: 0.05em;
 }
 
@@ -90,7 +90,7 @@
   max-width: 320px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px rgba(30, 58, 95, 0.12);
 }
 
 .bridge-hero-image img {
@@ -112,7 +112,7 @@
 .bridge-brand {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #fff;
+  color: #1e3a5f;
   letter-spacing: 0.15em;
 }
 
@@ -124,17 +124,18 @@
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #0a1628;
-  background: #fff;
+  color: #ffffff;
+  background: #c41e3a;
   border: none;
   border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 .bridge-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+  background: #e63950;
+  box-shadow: 0 8px 24px rgba(196, 30, 58, 0.3);
 }
 
 @media (max-width: 480px) {
