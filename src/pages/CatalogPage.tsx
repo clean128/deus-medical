@@ -13,10 +13,6 @@ export function CatalogPage() {
     setVisible(true)
   }, [])
 
-  const scrollToCatalog = () => {
-    catalogRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <main className="catalog-page">
       <NoIndex />
