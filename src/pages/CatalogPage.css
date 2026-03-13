@@ -1,0 +1,277 @@
+/* Catalog Page - Deus Medical: Blanco, Azul, Rojo - Profesional y médico */
+:root {
+  --dm-white: #ffffff;
+  --dm-blue: #1e3a5f;
+  --dm-blue-light: #2d5a87;
+  --dm-blue-pale: #e8f0f8;
+  --dm-red: #c41e3a;
+  --dm-red-light: #e63950;
+  --dm-text: #2c3e50;
+  --dm-text-muted: #5a6c7d;
+}
+
+.catalog-page {
+  min-height: 100vh;
+  background: var(--dm-white);
+  color: var(--dm-text);
+}
+
+/* Hero - Imagen principal */
+.catalog-hero {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.catalog-hero-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(30, 58, 95, 0.12);
+}
+
+.catalog-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+/* Garantías - Destacadas */
+.catalog-guarantees {
+  background: linear-gradient(180deg, var(--dm-blue-pale) 0%, var(--dm-white) 100%);
+  padding: 3rem 1.5rem;
+  margin: 0 0 3rem;
+}
+
+.guarantees-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.guarantee-card {
+  background: var(--dm-white);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(30, 58, 95, 0.08);
+  border: 1px solid rgba(30, 58, 95, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.guarantee-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+}
+
+.guarantee-card.guarantee-security {
+  border-color: var(--dm-red);
+  background: linear-gradient(135deg, #fff 0%, #fff5f6 100%);
+  box-shadow: 0 2px 12px rgba(196, 30, 58, 0.15);
+}
+
+.guarantee-card.guarantee-security:hover {
+  box-shadow: 0 8px 24px rgba(196, 30, 58, 0.2);
+}
+
+.guarantee-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.guarantee-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dm-blue);
+}
+
+.guarantee-card.guarantee-security h3 {
+  color: var(--dm-red);
+}
+
+.guarantee-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--dm-text-muted);
+  line-height: 1.5;
+}
+
+/* Catálogo */
+.catalog-products {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.catalog-section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dm-blue);
+  margin: 0 0 2rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--dm-white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 58, 95, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+}
+
+.product-image {
+  aspect-ratio: 1;
+  background: var(--dm-blue-pale);
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1.25rem;
+}
+
+.product-name {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dm-blue);
+}
+
+.product-description {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--dm-text-muted);
+  line-height: 1.4;
+}
+
+.product-price {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dm-red);
+}
+
+/* Sección de confianza */
+.catalog-trust {
+  background: var(--dm-blue-pale);
+  padding: 4rem 1.5rem;
+}
+
+.catalog-trust .catalog-section-title {
+  margin-bottom: 0.5rem;
+}
+
+.trust-subtitle {
+  text-align: center;
+  color: var(--dm-text-muted);
+  margin: 0 0 2rem;
+  font-size: 1rem;
+}
+
+.trust-gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.trust-gallery-item {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.trust-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--dm-blue) 0%, var(--dm-blue-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 1000;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.whatsapp-text {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .whatsapp-text {
+    display: none;
+  }
+
+  .whatsapp-float {
+    padding: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guarantees-grid {
+    grid-template-columns: 1fr;
+  }
+}
