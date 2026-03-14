@@ -52,9 +52,10 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 0.6) 80%,
-    rgba(255, 255, 255, 0.95) 100%
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.25) 40%,
+    rgba(0, 0, 0, 0.4) 70%,
+    rgba(0, 0, 0, 0.6) 100%
   );
 }
 
@@ -92,15 +93,24 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: var(--dm-blue);
+  color: var(--dm-white);
   margin: 0 0 1rem;
+  text-shadow:
+    0 0 2px rgba(0, 0, 0, 0.8),
+    0 0 4px rgba(0, 0, 0, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.8),
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .catalog-hero-subtitle {
   font-size: 1.125rem;
-  color: var(--dm-text-muted);
+  color: rgba(255, 255, 255, 0.95);
   margin: 0 0 2rem;
   line-height: 1.6;
+  text-shadow:
+    0 0 2px rgba(0, 0, 0, 0.8),
+    0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .catalog-hero-cta {

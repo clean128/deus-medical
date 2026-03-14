@@ -33,7 +33,7 @@ export function BridgePage() {
         <div className="bridge-footer">
           <span className="bridge-brand">DEUS MEDICAL</span>
           <Link to="/catalogo" className="bridge-cta">
-            MÁS INFO
+            IR A TIENDA
           </Link>
         </div>
       </div>
