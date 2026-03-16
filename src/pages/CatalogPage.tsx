@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { NoIndex } from '../components/NoIndex'
 import { WhatsAppButton } from '../components/WhatsAppButton'
-import { HERO_BOX_IMAGE, SHIPPING, SECURITY_MESSAGE } from '../config'
+import { HERO_BOX_IMAGE, SHIPPING } from '../config'
 import { products } from '../data/products'
 import './CatalogPage.css'
 
@@ -17,59 +17,56 @@ export function CatalogPage() {
     <main className="catalog-page">
       <NoIndex />
 
-      {/* Hero - Full viewport, immersive */}
-      <section className="catalog-hero">
-        <div className="catalog-hero-bg">
-          <img
-            src={HERO_BOX_IMAGE}
-            alt="Deus Medical"
-            loading="eager"
-            style={{ width: '150%', height: '150%', objectFit: 'contain' }}
-          />
-          <div className="catalog-hero-overlay" />
-        </div>
-        <div className={`catalog-hero-content ${visible ? 'visible' : ''}`}>
-          <span className="catalog-hero-badge">Deus Medical</span>
-          <h1 className="catalog-hero-title">
-            Tu mejor versión<br />empieza aquí
-          </h1>
-          <p className="catalog-hero-subtitle">
-            Productos de calidad. Entrega rápida. Máxima seguridad.
-          </p>
-        </div>
-      </section>
+      {/* Hero section - matching client's design */}
+      <section className="hero">
+        <div className="hero-bg" />
 
-      {/* Garantías - Compact, modern pills */}
-      <section className="catalog-guarantees">
-        <div className="guarantees-inner">
-          <div className="guarantee-item">
-            <div className="guarantee-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            </div>
-            <div>
-              <strong>Entrega rápida</strong>
-              <span>{SHIPPING.deliveryDays}</span>
+        {/* Logo top-left */}
+        <div className="hero-logo">
+          <img src="/deus-logo.png" alt="Deus Medical" />
+        </div>
+
+        <div className={`hero-layout ${visible ? 'visible' : ''}`}>
+          {/* LEFT HALF: text + product image (on top, higher z-index) */}
+          <div className="hero-half-left">
+            <h1 className="hero-title">
+              <span className="hero-title-white">Tu mejor versión</span>
+              <span className="hero-title-italic">empieza aquí</span>
+            </h1>
+            <p className="hero-subtitle">
+              Productos de calidad, Entrega rápida,<br />
+              Máxima seguridad.
+            </p>
+            {/* <button className="hero-cta" onClick={scrollToCatalog}>
+              IR A TIENDA
+            </button> */}
+            <div className="hero-product">
+              <img src={HERO_BOX_IMAGE} alt="DECAMED 250 - Deus Medical" />
             </div>
           </div>
-          <div className="guarantee-divider" />
-          <div className="guarantee-item">
-            <div className="guarantee-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+
+          {/* RIGHT HALF: shipping card (behind, lower z-index) */}
+          <div className="hero-half-right">
+            <div className="hero-shipping-card">
+              <h3 className="hero-shipping-title">
+                ENVÍO <span className="green">{SHIPPING.fixedCost}</span> EUROS
+              </h3>
+              <ul className="hero-shipping-list">
+                <li>
+                  <span className="check">&#10004;</span>
+                  <span>Tiempo de envío entre 24 y 72 horas.</span>
+                </li>
+                <li>
+                  <span className="check">&#10004;</span>
+                  <span>Envíos extremadamente seguros.</span>
+                </li>
+                <li>
+                  <span className="check">&#10004;</span>
+                  <span>Enviamos <strong>foto con tu nombre y el producto</strong> antes de enviarlo. Máxima seguridad.</span>
+                </li>
+              </ul>
             </div>
-            <div>
-              <strong>Envío fijo</strong>
-              <span>{SHIPPING.fixedCost} €</span>
-            </div>
-          </div>
-          <div className="guarantee-divider" />
-          <div className="guarantee-item guarantee-security">
-            <div className="guarantee-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <strong>Sello de seguridad</strong>
-              <span>{SECURITY_MESSAGE}</span>
-            </div>
+            <p className="hero-whatsapp-label">Compras solo por WhatsApp</p>
           </div>
         </div>
       </section>
@@ -89,7 +86,6 @@ export function CatalogPage() {
                 </div>
                 <div className="product-info">
                   <h3 className="product-name">{product.name}</h3>
-                  <p className="product-description">{product.description}</p>
                   <div className="product-footer">
                     <span className="product-price">{product.price.toFixed(2)} €</span>
                   </div>

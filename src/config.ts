@@ -1,6 +1,6 @@
 // Deus Medical - Configuration
 // Sustituir HERO_BOX_IMAGE por foto de caja Deus Medical cuando esté disponible
-export const HERO_BOX_IMAGE = '/DECAMED250.webp'
+export const HERO_BOX_IMAGE = '/DECAMED250.png'
 
 export const WHATSAPP_NUMBER = '34680861916'
 export const WHATSAPP_CTA = 'Contactar ya por WhatsApp'
