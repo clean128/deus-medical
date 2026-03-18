@@ -96,7 +96,7 @@ export const products: Product[] = [
     id: '15',
     name: 'Trembolona Enantato 200mg',
     price: 48,
-    image: '/products/mastermedp100_amp.webp',
+    image: '/products/trenbomede200_amp.webp',
   },
   {
     id: '16',
