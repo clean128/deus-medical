@@ -5,6 +5,33 @@ import { HERO_BOX_IMAGE, SHIPPING } from '../config'
 import { products } from '../data/products'
 import './CatalogPage.css'
 
+const trustOrderImages = [
+  {
+    sharp: '/orders/IMG-20260317-WA0009.jpg',
+    blur: '/orders_blur/IMG-20260318-WA0009.jpg',
+  },
+  {
+    sharp: '/orders/IMG-20260317-WA0010.jpg',
+    blur: '/orders_blur/IMG-20260318-WA0010.jpg',
+  },
+  {
+    sharp: '/orders/IMG-20260317-WA0011.jpg',
+    blur: '/orders_blur/IMG-20260318-WA0011.jpg',
+  },
+  {
+    sharp: '/orders/IMG-20260317-WA0012.jpg',
+    blur: '/orders_blur/IMG-20260318-WA0012.jpg',
+  },
+  {
+    sharp: '/orders/IMG-20260317-WA0013.jpg',
+    blur: '/orders_blur/IMG-20260318-WA0013.jpg',
+  },
+  {
+    sharp: '/orders/IMG-20260317-WA0014.jpg',
+    blur: '/orders_blur/IMG-20260318-WA0014.jpg',
+  },
+]
+
 export function CatalogPage() {
   const catalogRef = useRef<HTMLElement>(null)
   const [visible, setVisible] = useState(false)
@@ -100,17 +127,32 @@ export function CatalogPage() {
       <section className="catalog-trust">
         <div className="catalog-trust-inner">
           <div className="catalog-section-header">
-            <span className="section-label">Prueba social</span>
+            <span className="section-label">Envíos Diarios</span>
             <h2 className="catalog-section-title">Pedidos reales</h2>
             <p className="trust-subtitle">Fotos de pedidos personalizados antes del envío</p>
           </div>
           <div className="trust-gallery">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="trust-gallery-item">
-                <div className="trust-placeholder">
-                  <span>Pedido {i}</span>
+            {trustOrderImages.map((image, index) => (
+              <article key={image.sharp} className="trust-gallery-item">
+                <div className="trust-photo-frame">
+                  <div
+                    className="trust-photo-backdrop"
+                    style={{ backgroundImage: `url(${image.blur})` }}
+                    aria-hidden="true"
+                  />
+                  <img
+                    className="trust-photo-image"
+                    src={image.sharp}
+                    alt={`Pedido real ${index + 1} de Deus Medical`}
+                    loading="lazy"
+                  />
+                  <div className="trust-photo-overlay" aria-hidden="true" />
+                  <div className="trust-photo-watermark" aria-hidden="true">
+                    <img src="/deus-logo.png" alt="" />
+                  </div>
+                  <span className="trust-photo-badge">Pedido real {index + 1}</span>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
